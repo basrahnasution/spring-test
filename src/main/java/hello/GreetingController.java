@@ -38,6 +38,11 @@ public class GreetingController {
     	return em.createEntityManager().createQuery("from Actor").getResultList();
     }
     
+    @RequestMapping("/films")
+    public List<Film> allFilms(){
+    	return em.createEntityManager().createQuery("from Film").getResultList();
+    }
+    
     
 
     @RequestMapping("/greeting")
